@@ -22,16 +22,6 @@ Applied to Figure 2 (amyloid-$\beta$, Kelly et al.) and Figure 7 ($\alpha$-synuc
 
 ---
 
-## Files
-
-| File | Description |
-|------|-------------|
-| `Q6_fw_fitting_jupyter.py` | Full fitting workflow — Jupyter-ready |
-| `fw_fitting_final.png` | Figure 1: F-W fits (2×2: full timecourse + zoom into transition) |
-| `fw_residuals_final.png` | Figure 2: Residuals (data − fit) |
-
----
-
 ## WebPlotDigitizer Workflow
 
 [WebPlotDigitizer](https://automeris.io/WebPlotDigitizer/) is a free web app for extracting numerical data from published figures.
@@ -53,7 +43,7 @@ Click exactly 4 points on the axes (2 on X, 2 on Y) and enter their known values
 Either click each point manually (*Add Point*) or use automatic detection (*Automatic Extraction*) for dense datasets.
 
 **5. Export as CSV**  
-*File → Export → CSV* → save as e.g. `fig2_abeta.csv`
+*File → Export → CSV* → save as `(...).csv`
 
 ### Load in Python
 
