@@ -18,8 +18,6 @@ This script demonstrates the full workflow for extracting quantitative kinetic p
 
 Applied to Figure 2 (amyloid-$\beta$, Kelly et al.) and Figure 7 ($\alpha$-synuclein, Fink et al.) of Morris et al. (2008).
 
-> **Note on the data:** The data arrays in the script are approximate reconstructions of the published figures, created to demonstrate the workflow. For exact reproduction of the paper's results, replace them with your own WebPlotDigitizer CSV output as described below.
-
 ---
 
 ## WebPlotDigitizer Workflow
@@ -138,16 +136,16 @@ R2 = r_squared(B_data, fw_B_normalised(t_data, k1_fit, k2_fit))
 
 ## Results
 
-| Dataset | $k_1$ (h$^{-1}$, norm.) | $R^2$ | Paper's $k_1$ (h$^{-1}$) |
+| Dataset | $k_1$ ($h^{-1}$, norm.) | $R^2$ | Paper's $k_1$ ($h^{-1}$) |
 |---------|------------------------|-------|--------------------------|
-| Amyloid-$\beta$ (Fig. 2) | $3.4\times10^{-5}$ | 0.9993 | $8\times10^{-6}$ |
+| Amyloid- $\beta$ (Fig. 2) | $3.4\times10^{-5}$ | 0.9993 | $8\times10^{-6}$ |
 | $\alpha$-synuclein (Fig. 7) | $5.1\times10^{-5}$ | 0.9985 | $4\times10^{-5}$ |
 
 Both fits exceed $R^2 = 0.998$, consistent with the paper's $R^2 \geq 0.98$.
 
 ### Note on units of $k_2$
 
-The paper reports $k_2$ in $\mu$M$^{-1}$h$^{-1}$ (absolute concentration). When fitting normalised data ($[A]_0 = 1$, dimensionless), the fitted $k_2$ absorbs the concentration scaling and **cannot be directly compared** to the paper's values. Only $k_1$ (units h$^{-1}$) is directly comparable.
+The paper reports $k_2$ in $\mu$ $M^{-1}$ $h^{-1}$ (absolute concentration). When fitting normalised data ($[A]_0 = 1$, dimensionless), the fitted $k_2$ absorbs the concentration scaling and **cannot be directly compared** to the paper's values. Only $k_1$ (units $h^{-1}$) is directly comparable.
 
 To recover the paper's $k_2$:
 
